@@ -7,7 +7,7 @@ class Posts
   end
 
   def top
-    listing = reddit.get_listing(subreddit: 'programming', limit: 5)
+    listing = reddit.get_listing(subreddit: 'programming', limit: 2)
     posts = []
     listing.parsed_response["data"]["children"].each do |post_json|
       posts << Post.new(post_json)
