@@ -11,7 +11,7 @@ class Post
     @comments ||= Comments.new(id).all
   end
 
-  def parsed_link
-    @parsed_link ||= ParsedLink.new(link)
+  def article
+    @article ||= Article.new(link)
   end
 end

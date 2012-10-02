@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
   def index
-    @posts = Posts.new(reddit).top
+    @posts = Posts.latest('programming', 2)
   end
 end

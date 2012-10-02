@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 gem 'pg'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'haml'
+gem "redis", "~> 3.0.1"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

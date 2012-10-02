@@ -1,4 +1,4 @@
-class ParsedLink
+class Article
 
   def initialize(url)
     query = "token=#{ENV['DIFFBOT_TOKEN']}&url=#{url}"
