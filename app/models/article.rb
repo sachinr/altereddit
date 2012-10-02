@@ -1,15 +1,12 @@
 class Article
+  attr_accessor :title, :text, :author
 
   def initialize(url)
     query = "token=#{ENV['DIFFBOT_TOKEN']}&url=#{url}"
-    @response = HTTParty.get("http://www.diffbot.com/api/article?#{query}")
-  end
+    response = HTTParty.get("http://www.diffbot.com/api/article?#{query}")
 
-  def title
-    @response["title"]
-  end
-
-  def text
-    @response["text"]
+    @title = response["title"]
+    @text = response["text"]
+    @author = response["author"]
   end
 end

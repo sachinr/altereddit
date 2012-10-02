@@ -1,17 +1,21 @@
 class Post
-  attr_accessor :title, :id, :link
+  attr_accessor :id, :title, :link, :comments, :article
 
   def initialize(json_data)
     @title = json_data["data"]["title"]
     @link = json_data["data"]["url"]
     @id = json_data["data"]["id"]
+
+    fetch_comments
+    fetch_article
   end
 
-  def comments
-    @comments ||= Comments.new(id).all
+  private
+  def fetch_comments
+    @comments = Comments.fetch(id)
   end
 
-  def article
-    @article ||= Article.new(link)
+  def fetch_article
+    @article = Article.new(link)
   end
 end
