@@ -1,5 +1,4 @@
 Altereddit::Application.routes.draw do
-  match 'test' => 'static#index'
   match 'refresh' => 'posts#refresh'
   root :to => 'posts#index'
 
