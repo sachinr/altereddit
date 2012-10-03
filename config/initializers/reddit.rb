@@ -1,1 +1,1 @@
-$reddit = Snoo::Client.new
+REDDIT = Snoo::Client.new
