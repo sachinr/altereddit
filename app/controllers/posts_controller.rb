@@ -1,3 +1,7 @@
+require_dependency 'post'
+require_dependency 'comment'
+require_dependency 'article'
+
 class PostsController < ApplicationController
   def index
     @posts = YAML::load(REDIS.get(:posts))

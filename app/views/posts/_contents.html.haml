@@ -1,0 +1,8 @@
+.contents
+  %span.title Contents
+  %ul
+    - @posts.each_with_index do |post, index|
+      %li
+        = "#{index}."
+        = link_to post.title, "##{index}"
+
