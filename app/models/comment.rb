@@ -1,8 +1,13 @@
 class Comment
-  attr_accessor :body
+  attr_accessor :author, :body
 
   def initialize(comment_json)
-    @body = comment_json["data"]["body"]
+    data = comment_json["data"]
+    @body = data["body"]
+    @author = data["author"]
+    downs = data["downs"]
+    ups = data["ups"]
+    @score = ups.to_f - downs.to_f
   end
 
 end
