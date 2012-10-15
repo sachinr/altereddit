@@ -16,7 +16,7 @@
     - if ENV['GA_USER_ID']
       :javascript
         var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', ENV['GA_USER_ID']]);
+        _gaq.push(['_setAccount', "#{ENV['GA_USER_ID']}"]);
         _gaq.push(['_trackPageview']);
 
         (function() {
