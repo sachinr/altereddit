@@ -1,5 +1,10 @@
 %h2.title{ id: "#{index}" }= post.title
+%span.permalink
+  submitted by
+  =link_to post.author, post.author_link
+  =' | '
+  =link_to 'view', post.permalink
 %h3.article-title= link_to post.article.title, post.link
-- if post.article.text.present?
+- if post.article.sanitized_text.present?
   .article-summary
     = article_summary(post)

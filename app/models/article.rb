@@ -26,6 +26,10 @@ class Article
     @author = ''
   end
 
+  def sanitized_text
+    Sanitize.clean(text || '', Sanitize::Config::RESTRICTED).strip
+  end
+
   private
   def diffbot_response(with_html = true)
     query = "token=#{ENV['DIFFBOT_TOKEN']}&url=#{@url}"
