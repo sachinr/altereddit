@@ -138,6 +138,7 @@ DEPENDENCIES
   rails (= 3.2.6)
   redis (~> 3.0.1)
   sanitize
+  sass
   sass-rails (~> 3.2.3)
   snoo
   sqlite3

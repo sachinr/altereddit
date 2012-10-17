@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 gem 'pg'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'haml'
+gem 'sass'
 gem "redis", "~> 3.0.1"
 gem "truncate_html", "~> 0.5.5"
 
