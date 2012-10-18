@@ -27,7 +27,7 @@ class Article
   end
 
   def sanitized_text
-    Sanitize.clean(text || '', Sanitize::Config::RESTRICTED).strip
+    Sanitize.clean(text || '', Sanitize::Config::RELAXED).strip
   end
 
   private
